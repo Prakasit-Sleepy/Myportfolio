@@ -440,7 +440,7 @@ function Home() {
               University of Phayao
             </h3>
             <p className="text-md text-indigo-500 font-medium mb-4">
-              Software Engineering(ปริญญาตร:สาขาวิศวกรรมซอฟต์แวร)
+              Software Engineering(ปริญญาตรี:สาขาวิศวกรรมซอฟต์แวร)
             </p>
             <p className="text-gray-700 leading-relaxed text-sm md:text-base">
               I developed a solid foundation in software development, UI/UX
