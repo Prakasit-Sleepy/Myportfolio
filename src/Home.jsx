@@ -96,7 +96,7 @@ function Home() {
       mirror: true, // 👈 เพิ่ม mirror เพื่อให้แอนิเมชันเล่นย้อนกลับเมื่อเลื่อนกลับขึ้น
     });
 
-    setTimeout(() => setShowPopup(false), 1000);
+    setTimeout(() => setShowPopup(false), 3000);
 
     let lastScrollTop = 0;
     const onScroll = () => {
@@ -188,39 +188,53 @@ function Home() {
   return (
     <div className="relative min-h-screen w-screen font-sans text-gray-900">
       <nav
-  className={`w-full px-6 py-4 flex justify-between items-center shadow-sm fixed top-0 z-50 transition-transform duration-500 ${
-    hideNavbar ? "-translate-y-full" : "translate-y-0"
-  }`}
->
-  <div className="font-bold text-lg">Prakasit</div>
-  <div className="flex gap-6 text-sm text-gray-700">
-    <a href="#about" className="hover:text-black">
-      About
-    </a>
-    <a href="#work" className="hover:text-black">
-      Work
-    </a>
-    <a href="#contact" className="hover:text-black">
-      Contact
-    </a>
-  </div>
-</nav>
-
+        className={`w-full px-6 py-4 flex justify-between items-center shadow-sm fixed top-0 z-50 transition-transform duration-500 ${
+          hideNavbar ? "-translate-y-full" : "translate-y-0"
+        }`}
+      >
+        <div className="font-bold text-lg">Prakasit</div>
+        <div className="flex gap-6 text-sm text-gray-700">
+          <a href="#about" className="hover:text-black">
+            About
+          </a>
+          <a href="#work" className="hover:text-black">
+            Work
+          </a>
+          <a href="#contact" className="hover:text-black">
+            Contact
+          </a>
+        </div>
+      </nav>
 
       <ParticleBackground />
       <div className="particle-background"></div>
       <PlayStationExplosion className="absolute inset-0 z-0 pointer-events-none" />
 
       {showPopup && (
-        <div className="fixed inset-0 z-50 flex items-center justify-center bg-black/20 backdrop-blur-sm animate-fadeIn">
-          <div className="bg-white px-8 py-6 rounded-lg shadow-xl text-2xl font-bold text-gray-800 animate-pop-up">
-            <span className="block animate-bounce text-4xl text-blue-500 mb-4">
-              👋
-            </span>
-            สวัสดีครับ ยินดีต้อนรับ!
-          </div>
-        </div>
-      )}
+  <div className="fixed inset-0 z-50 flex items-center justify-center bg-black/30 backdrop-blur-sm animate-fadeIn">
+    <div className="relative bg-gradient-to-br from-white via-blue-50 to-white px-10 py-8 rounded-2xl shadow-2xl text-center max-w-sm w-full animate-scaleIn">
+
+      {/* ปุ่มปิดแบบหรู */}
+      <button
+        onClick={() => setShowPopup(false)}
+        className="absolute top-3 right-3 w-9 h-9 flex items-center justify-center rounded-full bg-white shadow-md text-gray-500 hover:bg-red-100 hover:text-red-600 transition-all duration-300 ease-in-out focus:outline-none focus:ring-2 focus:ring-red-300"
+        aria-label="Close"
+      >
+        <span className="text-xl font-bold">&times;</span>
+      </button>
+
+      {/* ไอคอนทักทาย */}
+      <span className="absolute -top-6 left-1/2 transform -translate-x-1/2 bg-blue-100 text-blue-500 text-5xl rounded-full p-3 shadow-md animate-bounce">
+        👋
+      </span>
+
+      {/* ข้อความต้อนรับ */}
+      <h2 className="mt-6 text-3xl font-extrabold text-gray-800">สวัสดีครับ</h2>
+      <p className="mt-2 text-lg text-gray-600 font-medium">ยินดีต้อนรับเข้าสู่ระบบของเรา!</p>
+    </div>
+  </div>
+)}
+
 
       <div className="relative z-10 flex flex-col items-center justify-center min-h-screen px-6 text-center pt-20">
         <div className="max-w-screen-xl w-full grid grid-cols-1 md:grid-cols-2 items-center gap-16 md:gap-24">
@@ -309,9 +323,9 @@ function Home() {
       </section>
 
       <section id="work" className="relative z-10 px-6 py-20">
-  <h2 className="text-3xl font-bold text-center mb-12" data-aos="fade-up">
-    Latest work
-  </h2>
+        <h2 className="text-3xl font-bold text-center mb-12" data-aos="fade-up">
+          Latest work
+        </h2>
         <div className="max-w-screen-lg mx-auto grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-x-8 gap-y-12 px-2">
           {projects.map((p, i) => (
             <div key={p.title} data-aos="fade-up" data-aos-delay={i * 150}>
@@ -440,7 +454,7 @@ function Home() {
               University of Phayao
             </h3>
             <p className="text-md text-indigo-500 font-medium mb-4">
-              Software Engineering(ปริญญาตร:สาขาวิศวกรรมซอฟต์แวร)
+              Software Engineering(ปริญญาตรี:สาขาวิศวกรรมซอฟต์แวร)
             </p>
             <p className="text-gray-700 leading-relaxed text-sm md:text-base">
               I developed a solid foundation in software development, UI/UX
@@ -553,21 +567,21 @@ function Home() {
               name="name"
               placeholder="Your Name"
               required
-              className="border border-gray-300 rounded-lg px-5 py-3 focus:outline-none focus:ring-2 focus:ring-indigo-500 placeholder-gray-400 text-gray-800"
+              className="border border-gray-300 rounded-lg px-5 py-3 focus:outline-none focus:ring-2 focus:ring-indigo-500 placeholder-gray-400 text-white"
             />
             <input
               type="email"
               name="email"
               placeholder="Your Email"
               required
-              className="border border-gray-300 rounded-lg px-5 py-3 focus:outline-none focus:ring-2 focus:ring-indigo-500 placeholder-gray-400 text-gray-800"
+              className="border border-gray-300 rounded-lg px-5 py-3 focus:outline-none focus:ring-2 focus:ring-indigo-500 placeholder-gray-400 text-white"
             />
             <textarea
               name="message"
               rows="5"
               placeholder="Your Message"
               required
-              className="border border-gray-300 rounded-lg px-5 py-3 focus:outline-none focus:ring-2 focus:ring-indigo-500 placeholder-gray-400 text-gray-800 resize-none"
+              className="border border-gray-300 rounded-lg px-5 py-3 focus:outline-none focus:ring-2 focus:ring-indigo-500 placeholder-gray-400 text-white resize-none"
             ></textarea>
             <button
               type="submit"
