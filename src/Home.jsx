@@ -431,7 +431,7 @@ function Home() {
             data-aos-delay="200"
           >
             <img
-              src="https://scontent.fcnx4-1.fna.fbcdn.net/v/t39.30808-6/306197415_775989243379760_2989542025835248400_n.jpg?_nc_cat=111&ccb=1-7&_nc_sid=6ee11a&_nc_eui2=AeFDo9KdFeYVnYdORd4JsTxvRy-9yp63DCBHL73KnrcMIJtB_rzfGloMvOZjV5IXVNociNw3OsEc_7SyOaNgBV3U&_nc_ohc=h7yPnG8OQ2oQ7kNvwFXo784&_nc_oc=Adkkgq_kIWhZShno5QZ27iV-5Rk0tobC_wnveaNtMI78fuoA43ik7IiJa49u0vFc2zQ&_nc_zt=23&_nc_ht=scontent.fcnx4-1.fna&_nc_gid=T85gUwqfHeMAAGHBXiHBfw&oh=00_AfEoq7R20gCafq-aPLdaOT5_xL2kQ2QozAdZJn4oSLvYSg&oe=67FFD40D"
+              src="https://i.imgur.com/4Inux04.jpeg"
               alt="Orange Workshop"
               className="w-28 h-28 object-contain"
             />
