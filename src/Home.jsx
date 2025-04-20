@@ -27,6 +27,33 @@ const tools = [
     src: "https://images-eds-ssl.xboxlive.com/image?url=4rt9.lXDC4H_93laV1_eHHFT949fUipzkiFOBH3fAiZZUCdYojwUyX2aTonS1aIwMrx6NUIsHfUHSLzjGJFxxo4K81Ei7WzcnqEk8W.MgwadpHjl76SlQnWKc4OkaILTy7aDmpraBC2vB.Q_eb6EavJPyLEBEEqc.BSkZzu5Vng-&format=source&h=380",
     alt: "Canva",
   },
+  {
+    src: "https://upload.wikimedia.org/wikipedia/commons/thumb/9/9a/Visual_Studio_Code_1.35_icon.svg/768px-Visual_Studio_Code_1.35_icon.svg.png",
+    alt: "Vs Code",
+  },
+];
+const skills = [
+  {
+    src: "https://cdn-icons-png.flaticon.com/512/732/732212.png",
+    alt: "HTML5",
+  },
+  { src: "https://cdn-icons-png.flaticon.com/512/732/732190.png", alt: "CSS3" },
+  {
+    src: "https://cdn-icons-png.flaticon.com/512/5968/5968292.png",
+    alt: "JavaScript",
+  },
+  {
+    src: "https://upload.wikimedia.org/wikipedia/commons/thumb/a/a7/React-icon.svg/768px-React-icon.svg.png",
+    alt: "React",
+  },
+  {
+    src: "https://cdn-icons-png.flaticon.com/512/5968/5968322.png",
+    alt: "Node.js",
+  },
+  {
+    src: "https://getlogovector.com/wp-content/uploads/2021/01/tailwind-css-logo-vector.png",
+    alt: "TailwindCSS",
+  },
 ];
 
 const services = [
@@ -205,37 +232,36 @@ function Home() {
           </a>
         </div>
       </nav>
-
       <ParticleBackground />
       <div className="particle-background"></div>
       <PlayStationExplosion className="absolute inset-0 z-0 pointer-events-none" />
-
       {showPopup && (
-  <div className="fixed inset-0 z-50 flex items-center justify-center bg-black/30 backdrop-blur-sm animate-fadeIn">
-    <div className="relative bg-gradient-to-br from-white via-blue-50 to-white px-10 py-8 rounded-2xl shadow-2xl text-center max-w-sm w-full animate-scaleIn">
+        <div className="fixed inset-0 z-50 flex items-center justify-center bg-black/30 backdrop-blur-sm animate-fadeIn">
+          <div className="relative bg-gradient-to-br from-white via-blue-50 to-white px-10 py-8 rounded-2xl shadow-2xl text-center max-w-sm w-full animate-scaleIn">
+            {/* ปุ่มปิดแบบหรู */}
+            <button
+              onClick={() => setShowPopup(false)}
+              className="absolute top-3 right-3 w-9 h-9 flex items-center justify-center rounded-full bg-white shadow-md text-gray-500 hover:bg-red-100 hover:text-red-600 transition-all duration-300 ease-in-out focus:outline-none focus:ring-2 focus:ring-red-300"
+              aria-label="Close"
+            >
+              <span className="text-xl font-bold">&times;</span>
+            </button>
 
-      {/* ปุ่มปิดแบบหรู */}
-      <button
-        onClick={() => setShowPopup(false)}
-        className="absolute top-3 right-3 w-9 h-9 flex items-center justify-center rounded-full bg-white shadow-md text-gray-500 hover:bg-red-100 hover:text-red-600 transition-all duration-300 ease-in-out focus:outline-none focus:ring-2 focus:ring-red-300"
-        aria-label="Close"
-      >
-        <span className="text-xl font-bold">&times;</span>
-      </button>
+            {/* ไอคอนทักทาย */}
+            <span className="absolute -top-6 left-1/2 transform -translate-x-1/2 bg-blue-100 text-blue-500 text-5xl rounded-full p-3 shadow-md animate-bounce">
+              👋
+            </span>
 
-      {/* ไอคอนทักทาย */}
-      <span className="absolute -top-6 left-1/2 transform -translate-x-1/2 bg-blue-100 text-blue-500 text-5xl rounded-full p-3 shadow-md animate-bounce">
-        👋
-      </span>
-
-      {/* ข้อความต้อนรับ */}
-      <h2 className="mt-6 text-3xl font-extrabold text-gray-800">สวัสดีครับ</h2>
-      <p className="mt-2 text-lg text-gray-600 font-medium">ยินดีต้อนรับเข้าสู่ระบบของเรา!</p>
-    </div>
-  </div>
-)}
-
-
+            {/* ข้อความต้อนรับ */}
+            <h2 className="mt-6 text-3xl font-extrabold text-gray-800">
+              สวัสดีครับ
+            </h2>
+            <p className="mt-2 text-lg text-gray-600 font-medium">
+              ยินดีต้อนรับทุกท่านที่ให้ความสนใจครับ!
+            </p>
+          </div>
+        </div>
+      )}
       <div className="relative z-10 flex flex-col items-center justify-center min-h-screen px-6 text-center pt-20">
         <div className="max-w-screen-xl w-full grid grid-cols-1 md:grid-cols-2 items-center gap-16 md:gap-24">
           <div className="animate-slideInLeft pl-3 md:pl-4 lg:pl-14 text-left">
@@ -294,7 +320,6 @@ function Home() {
           </div>
         </div>
       </div>
-
       <section className="relative z-10 px-6 py-16" data-aos="fade-up">
         <div className="max-w-screen-md mx-auto grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-10 text-center">
           {services.map((service, i) => (
@@ -321,7 +346,6 @@ function Home() {
           ))}
         </div>
       </section>
-
       <section id="work" className="relative z-10 px-6 py-20">
         <h2 className="text-3xl font-bold text-center mb-12" data-aos="fade-up">
           Latest work
@@ -344,7 +368,6 @@ function Home() {
           ))}
         </div>
       </section>
-
       <section className="relative z-10 px-6 py-16" data-aos="fade-up">
         <h2 className="text-2xl font-semibold text-center mb-8">My Tools</h2>
         <div className="flex justify-center items-center gap-10 flex-wrap px-6">
@@ -360,7 +383,23 @@ function Home() {
           ))}
         </div>
       </section>
-
+      <section className="relative z-10 px-6 py-16" data-aos="fade-up">
+        <h2 className="text-2xl font-semibold text-center mb-8">
+          Coding Skill
+        </h2>
+        <div className="flex justify-center items-center gap-10 flex-wrap px-6">
+          {skills.map(({ src, alt }, i) => (
+            <img
+              key={alt}
+              src={src}
+              alt={alt}
+              className="h-10"
+              data-aos="fade-up"
+              data-aos-delay={i * 100}
+            />
+          ))}
+        </div>
+      </section>
       <section className="relative z-10 px-6 py-20" data-aos="fade-up">
         <h2 className="text-3xl font-bold text-center mb-12" data-aos="fade-up">
           Work Experience
@@ -408,7 +447,10 @@ function Home() {
               Tossaguns.com
             </h3>
             <p className="text-sm text-gray-600 mb-4">
-              Project Manager&UX/UI Designer
+              Project Manager & UX/UI Designer{" "}
+              <span className="text-red-500">
+                (ลาออก:บริษัทไม่จ่ายเงินพนักงาน)
+              </span>
             </p>
             <p className="text-gray-700 leading-relaxed">
               I specialize in restructuring workflows, project planning, task
@@ -617,8 +659,7 @@ function Home() {
           </div>
         </div>
       </section>
-
-      <div className="h-32"></div>
+      <div className="h-32"></div>a
     </div>
   );
 }
