@@ -405,7 +405,7 @@ function Home() {
           Work Experience
         </h2>
 
-        <div className="max-w-screen-lg mx-auto grid grid-cols-1 md:grid-cols-2 gap-10 items-center">
+        <div className="max-w-screen-lg mx-auto grid grid-cols-1 lg:grid-cols-2 gap-10 items-center">
           {/* Owl Day House */}
           <div
             className="bg-white p-6 rounded-xl shadow-md"
