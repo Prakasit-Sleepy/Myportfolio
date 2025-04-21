@@ -197,7 +197,7 @@ function Home() {
           </button>
         ))}
       </div>
-      <div className="flex justify-center gap-2 mt-4">
+      <div className="flex flex-wrap justify-center gap-2 mt-4">
         {images.map((_, i) => (
           <span
             key={i}
@@ -213,14 +213,14 @@ function Home() {
   );
 
   return (
-    <div className="relative min-h-screen w-screen font-sans text-gray-900">
+    <div className="relative min-h-screen w-screen font-sans text-gray-900 max-w-screen-xl mx-auto">
       <nav
-        className={`w-full px-4 sm:px-6 py-4 flex justify-between items-center shadow-sm fixed top-0 z-50 transition-transform duration-500 ${
+        className={`w-full px-4 sm:px-6 md:px-8 py-4 flex justify-between items-center shadow-sm fixed top-0 z-50 transition-transform duration-500 ${
           hideNavbar ? "-translate-y-full" : "translate-y-0"
         }`}
       >
         <div className="font-bold text-lg">Prakasit</div>
-        <div className="flex gap-6 text-sm text-gray-700">
+        <div className="flex flex-wrap gap-6 text-sm text-gray-700">
           <a href="#about" className="hover:text-black">
             About
           </a>
@@ -262,8 +262,8 @@ function Home() {
           </div>
         </div>
       )}
-      <div className="relative z-10 flex flex-col items-center justify-center min-h-screen px-4 sm:px-6 text-center pt-20">
-        <div className="max-w-screen-xl w-full grid grid-cols-1 lg:grid-cols-2 items-center gap-16 md:gap-24">
+      <div className="relative z-10 flex flex-col items-center justify-center min-h-screen px-4 sm:px-6 md:px-8 text-center pt-20">
+        <div className="max-w-screen-xl w-full grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-2 items-center gap-16 md:gap-24">
           <div className="animate-slideInLeft pl-3 md:pl-4 lg:pl-14 text-left">
             <p className="text-sm text-gray-700 font-semibold mb-3">
               UX/UI Designer | Portfolio
@@ -287,7 +287,7 @@ function Home() {
                     );
                     createBurst();
                   }}
-                  className="bg-black text-white px-4 sm:px-6 py-3 rounded-full hover:bg-gray-800 hover:scale-105 shadow-md transition-all duration-300 font-semibold relative"
+                  className="bg-black text-white px-4 sm:px-6 md:px-8 py-3 rounded-full hover:bg-gray-800 hover:scale-105 shadow-md transition-all duration-300 font-semibold relative"
                 >
                   📄 Dowload Resume
                 </button>
@@ -320,12 +320,12 @@ function Home() {
           </div>
         </div>
       </div>
-      <section className="relative z-10 px-4 sm:px-6 py-16" data-aos="fade-up">
-        <div className="max-w-screen-md mx-auto grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-10 text-center">
+      <section className="relative z-10 px-4 sm:px-6 md:px-8 py-16" data-aos="fade-up">
+        <div className="max-w-screen-xl mx-auto grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-10 text-center">
           {services.map((service, i) => (
             <div
               key={i}
-              className="flex flex-col items-center group transition-transform duration-300 hover:scale-110"
+              className="flex flex-wrap flex-col items-center group transition-transform duration-300 hover:scale-110"
               data-aos="fade-up"
               data-aos-delay={i * 150}
             >
@@ -346,11 +346,11 @@ function Home() {
           ))}
         </div>
       </section>
-      <section id="work" className="relative z-10 px-4 sm:px-6 py-20">
+      <section id="work" className="relative z-10 px-4 sm:px-6 md:px-8 py-20">
         <h2 className="text-3xl font-bold text-center mb-12" data-aos="fade-up">
           Latest work
         </h2>
-        <div className="max-w-screen-lg mx-auto grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-x-8 gap-y-12 px-2">
+        <div className="max-w-screen-xl mx-auto grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-x-8 gap-y-12 px-2">
           {projects.map((p, i) => (
             <div key={p.title} data-aos="fade-up" data-aos-delay={i * 150}>
               <ProjectCard
@@ -368,9 +368,9 @@ function Home() {
           ))}
         </div>
       </section>
-      <section className="relative z-10 px-4 sm:px-6 py-16" data-aos="fade-up">
+      <section className="relative z-10 px-4 sm:px-6 md:px-8 py-16" data-aos="fade-up">
         <h2 className="text-2xl font-semibold text-center mb-8">My Tools</h2>
-        <div className="flex justify-center items-center gap-10 flex-wrap px-4 sm:px-6">
+        <div className="flex flex-wrap justify-center items-center gap-10  px-4 sm:px-6 md:px-8">
           {tools.map(({ src, alt }, i) => (
             <img
               key={alt}
@@ -383,11 +383,11 @@ function Home() {
           ))}
         </div>
       </section>
-      <section className="relative z-10 px-4 sm:px-6 py-16" data-aos="fade-up">
+      <section className="relative z-10 px-4 sm:px-6 md:px-8 py-16" data-aos="fade-up">
         <h2 className="text-2xl font-semibold text-center mb-8">
           Coding Skill
         </h2>
-        <div className="flex justify-center items-center gap-10 flex-wrap px-4 sm:px-6">
+        <div className="flex flex-wrap justify-center items-center gap-10  px-4 sm:px-6 md:px-8">
           {skills.map(({ src, alt }, i) => (
             <img
               key={alt}
@@ -400,12 +400,12 @@ function Home() {
           ))}
         </div>
       </section>
-      <section className="relative z-10 px-4 sm:px-6 py-20" data-aos="fade-up">
+      <section className="relative z-10 px-4 sm:px-6 md:px-8 py-20" data-aos="fade-up">
         <h2 className="text-3xl font-bold text-center mb-12" data-aos="fade-up">
           Work Experience
         </h2>
 
-        <div className="max-w-screen-lg mx-auto grid grid-cols-1 lg:grid-cols-2 gap-10 items-center">
+        <div className="max-w-screen-xl mx-auto grid grid-cols-1 lg:grid-cols-2 gap-10 items-center">
           {/* Owl Day House */}
           <div
             className="bg-white p-6 rounded-xl shadow-md"
@@ -426,7 +426,7 @@ function Home() {
             </p>
           </div>
           <div
-            className="flex items-center justify-center"
+            className="flex flex-wrap items-center justify-center"
             data-aos="fade-left"
             data-aos-delay="200"
           >
@@ -463,7 +463,7 @@ function Home() {
             </p>
           </div>
           <div
-            className="flex items-center justify-center"
+            className="flex flex-wrap items-center justify-center"
             data-aos="fade-left"
             data-aos-delay="400"
           >
@@ -476,7 +476,7 @@ function Home() {
         </div>
       </section>
       <section
-        className="relative z-10 px-4 sm:px-6 py-20 bg-gradient-to-b from-white "
+        className="relative z-10 px-4 sm:px-6 md:px-8 py-20 bg-gradient-to-b from-white "
         data-aos="fade-up"
       >
         <h2
@@ -485,7 +485,7 @@ function Home() {
         >
           Education
         </h2>
-        <div className="max-w-screen-lg mx-auto grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+        <div className="max-w-screen-xl mx-auto grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-2 gap-12 items-center">
           {/* ข้อมูลมหาวิทยาลัย */}
           <div
             className="bg-white p-8 rounded-3xl shadow-lg text-center md:text-left"
@@ -509,7 +509,7 @@ function Home() {
 
           {/* โลโก้มหาวิทยาลัย */}
           <div
-            className="flex items-center justify-center"
+            className="flex flex-wrap items-center justify-center"
             data-aos="fade-left"
             data-aos-delay="200"
           >
@@ -525,7 +525,7 @@ function Home() {
       </section>
       <section
         id="about"
-        className="relative z-10 px-4 sm:px-6 py-20 bg-white"
+        className="relative z-10 px-4 sm:px-6 md:px-8 py-20 bg-white"
         data-aos="fade-up"
       >
         <h2
@@ -534,10 +534,10 @@ function Home() {
         >
           About Me
         </h2>
-        <div className="max-w-screen-lg mx-auto grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+        <div className="max-w-screen-xl mx-auto grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-2 gap-12 items-center">
           {/* รูปโปรไฟล์ */}
           <div
-            className="flex items-center justify-center"
+            className="flex flex-wrap items-center justify-center"
             data-aos="fade-right"
             data-aos-delay="100"
           >
@@ -604,7 +604,7 @@ function Home() {
       </section>
       <section
         id="contact"
-        className="relative z-10 px-4 sm:px-6 py-24"
+        className="relative z-10 px-4 sm:px-6 md:px-8 py-24"
         data-aos="fade-up"
       >
         <h2
