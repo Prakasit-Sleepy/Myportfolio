@@ -46,7 +46,7 @@ function ContactButtonWithEffect() {
                    hover:bg-gray-800 hover:scale-105 shadow-md 
                    transition-all duration-300 font-semibold"
       >
-        Love
+        💖Love
       </button>
 
       {show &&
