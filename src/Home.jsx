@@ -475,7 +475,7 @@ function Home() {
             data-aos-delay="400"
           >
             <img
-              src="https://tossaguns.com/logo.png"
+              src="https://i.imgur.com/ujMZK5E.jpeg"
               alt="Tossagun Digital"
               className="w-28 h-28 object-contain"
             />
