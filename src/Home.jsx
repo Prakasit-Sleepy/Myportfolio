@@ -1,4 +1,4 @@
-import React, { useEffect, useState, useRef } from "react";
+import React, { useEffect, useState, useRef, useMemo } from "react";
 import "./index.css";
 import ParticleBackground from "./ParticleBackground";
 import PlayStationButton from "./components/PlayStationButton";
@@ -110,7 +110,7 @@ const projects = [
 ];
 
 function Home() {
-  const [hideNavbar, setHideNavbar] = useState(false);
+  const isIOS = useMemo(() => /iPad|iPhone|iPod/.test(navigator.userAgent), []);  const [hideNavbar, setHideNavbar] = useState(false);
   const [showPopup, setShowPopup] = useState(true);
   const [resumeBursts, setResumeBursts] = useState([]);
   const [activeIndices, setActiveIndices] = useState(projects.map(() => 0));
@@ -118,11 +118,10 @@ function Home() {
 
   
   useEffect(() => {
-    const isIOS = /iPad|iPhone|iPod/.test(navigator.userAgent);
     if (isIOS) {
       document.body.classList.add('ios-device');
     }
-  }, []);
+  }, [isIOS]);
 
   useEffect(() => {
     AOS.init({
@@ -270,7 +269,7 @@ function Home() {
           </div>
         </div>
       )}
-      <div className="relative z-10 flex flex-col items-center justify-center min-h-screen px-4 sm:px-6 text-center pt-20">
+      <div className="relative z-10 flex flex-col items-center justify-center min-h-screen px-4 sm:px-6 text-center pt-28">
         <div className="max-w-screen-xl w-full grid grid-cols-1 lg:grid-cols-2 items-center gap-16 md:gap-24">
           <div className="animate-slideInLeft pl-3 md:pl-4 lg:pl-14 text-left">
             <p className="text-sm text-gray-700 font-semibold mb-3">
@@ -297,7 +296,7 @@ function Home() {
                   }}
                   className="bg-black text-white px-4 sm:px-6 py-3 rounded-full hover:bg-gray-800 hover:scale-105 shadow-md transition-all duration-300 font-semibold relative"
                 >
-                  📄 Dowload Resume
+                  📄 Download Resume
                 </button>
                 {resumeBursts.map(({ id, color, x, y, symbol }) => (
                   <span
@@ -476,7 +475,7 @@ function Home() {
             data-aos-delay="400"
           >
             <img
-              src="https://i.imgur.com/ujMZK5E.jpeg"
+              src="https://tossaguns.com/logo.png"
               alt="Tossagun Digital"
               className="w-28 h-28 object-contain"
             />
