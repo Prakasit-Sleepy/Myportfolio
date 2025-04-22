@@ -118,7 +118,8 @@ button:focus-visible {
     background: #0d0d0d;
     z-index: -10;
     overflow: hidden;
-  }
+    pointer-events: none;
+}
 
   .particle-background::before {
     content: "";
@@ -168,10 +169,10 @@ button:focus-visible {
     transform: translateY(0);
   }
   html, body {
-    height: 100%;
-    overflow-x: hidden;
-    scroll-behavior: smooth;
-  }
+  overflow-x: hidden;
+  overflow-y: auto;
+  scroll-behavior: smooth;
+}
   
   body {
     margin: 0;
