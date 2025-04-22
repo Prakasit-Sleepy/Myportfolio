@@ -1,22 +1,45 @@
-<!-- index.html -->
 <!DOCTYPE html>
 <html lang="th">
 
 <head>
   <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-status-bar-style" content="default">
+
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Kanit&display=swap" rel="stylesheet" />
 
-  <!-- ✅ เพิ่ม favicon -->
   <link rel="icon" type="image/png" href="/playstation_icons_favicon.svg" />
-
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Prakasit Portfolio</title>
+
+  <style>
+    :root {
+      --vh: 1vh;
+    }
+    body.ios-device .particle-background::before {
+      display: none !important;
+    }
+    body.ios-device .animate-burst {
+      animation: none !important;
+    }
+  </style>
 </head>
 
 <body>
   <div id="root"></div>
+  <script>
+    const isIOS = /iPad|iPhone|iPod/.test(navigator.userAgent);
+    if (isIOS) {
+      document.body.classList.add('ios-device');
+    }
+    function setVH() {
+      document.documentElement.style.setProperty('--vh', `${window.innerHeight * 0.01}px`);
+    }
+    window.addEventListener('resize', setVH);
+    setVH();
+  </script>
   <script type="module" src="/src/main.jsx"></script>
 </body>
 
