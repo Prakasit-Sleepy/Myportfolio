@@ -220,7 +220,7 @@ function Home() {
   );
 
   return (
-    <div className="relative min-h-screen w-screen font-sans text-gray-900">
+    <div className="relative min-h-[calc(var(--vh,1vh)*100)] w-screen font-sans text-gray-900">
       <nav
         className={`w-full px-4 sm:px-6 py-4 flex justify-between items-center shadow-sm fixed top-0 z-50 transition-transform duration-500 ${
           hideNavbar ? "-translate-y-full" : "translate-y-0"
@@ -239,7 +239,7 @@ function Home() {
           </a>
         </div>
       </nav>
-      <ParticleBackground />
+      {!isIOS && <ParticleBackground />}
       <div className="particle-background"></div>
       <PlayStationExplosion className="absolute inset-0 z-0 pointer-events-none" />
       {showPopup && (
@@ -269,7 +269,7 @@ function Home() {
           </div>
         </div>
       )}
-      <div className="relative z-10 flex flex-col items-center justify-center min-h-screen px-4 sm:px-6 text-center pt-28">
+      <div className="relative z-10 flex flex-col items-center justify-center min-h-[calc(var(--vh,1vh)*100)] px-4 sm:px-6 text-center pt-28">
         <div className="max-w-screen-xl w-full grid grid-cols-1 lg:grid-cols-2 items-center gap-16 md:gap-24">
           <div className="animate-slideInLeft pl-3 md:pl-4 lg:pl-14 text-left">
             <p className="text-sm text-gray-700 font-semibold mb-3">
