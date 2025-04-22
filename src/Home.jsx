@@ -462,7 +462,7 @@ function Home() {
             <p className="text-sm text-gray-600 mb-4">
               Project Manager & UX/UI Designer{" "}
               <span className="text-red-500">
-                (ลาออก:บริษัทไม่จ่ายเงินพนักงาน)
+                (ลาออก)
               </span>
             </p>
             <p className="text-gray-700 leading-relaxed">
