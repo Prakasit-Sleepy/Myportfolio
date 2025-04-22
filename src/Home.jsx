@@ -618,7 +618,7 @@ function Home() {
           className="text-4xl font-bold text-center mb-14 text-gray-800"
           data-aos="fade-up"
         >
-          Contact Me
+         Contact Me
         </h2>
 
         <div className="max-w-3xl mx-auto bg-white p-10 rounded-3xl shadow-xl space-y-10">
