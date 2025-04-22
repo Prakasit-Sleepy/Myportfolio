@@ -110,6 +110,12 @@ const projects = [
 ];
 
 function Home() {
+  useEffect(() => {
+    const style = document.createElement("style");
+    style.innerHTML = `body, html { overflow-x: hidden; }`;
+    document.head.appendChild(style);
+  }, []);
+
   const isIOS = useMemo(() => /iPad|iPhone|iPod/.test(navigator.userAgent), []);  const [hideNavbar, setHideNavbar] = useState(false);
   const [showPopup, setShowPopup] = useState(true);
   const [resumeBursts, setResumeBursts] = useState([]);
