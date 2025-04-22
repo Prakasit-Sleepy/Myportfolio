@@ -239,7 +239,7 @@ function Home() {
           </a>
         </div>
       </nav>
-      {!isIOS && <ParticleBackground />}
+      <ParticleBackground />
       <div className="particle-background"></div>
       <PlayStationExplosion className="absolute inset-0 z-0 pointer-events-none" />
       {showPopup && (
