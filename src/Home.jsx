@@ -610,80 +610,80 @@ function Home() {
         </div>
       </section>
       <section
-        id="contact"
-        className="relative z-10 px-4 sm:px-6 py-24"
-        data-aos="fade-up"
+  id="contact"
+  className="relative z-10 px-4 sm:px-6 py-24"
+  data-aos="fade-up"
+>
+  <h2
+    className="text-4xl font-bold text-center mb-14 text-gray-800"
+    data-aos="fade-up"
+  >
+    Contact Me
+  </h2>
+
+  <div className="max-w-3xl mx-auto bg-white p-10 rounded-3xl shadow-xl space-y-10">
+    <form
+      action="https://formsubmit.co/prakasitchuchawna@gmail.com"
+      method="POST"
+      className="grid grid-cols-1 gap-6"
+      data-aos="fade-up"
+      data-aos-delay="200"
+    >
+      <input
+        type="text"
+        name="name"
+        placeholder="Your Name"
+        required
+        className="bg-[#111] text-white border border-gray-300 rounded-lg px-5 py-3 focus:outline-none focus:ring-2 focus:ring-indigo-500 placeholder-gray-400"
+      />
+      <input
+        type="email"
+        name="email"
+        placeholder="Your Email"
+        required
+        className="bg-[#111] text-white border border-gray-300 rounded-lg px-5 py-3 focus:outline-none focus:ring-2 focus:ring-indigo-500 placeholder-gray-400"
+      />
+      <textarea
+        name="message"
+        rows="5"
+        placeholder="Your Message"
+        required
+        className="bg-[#111] text-white border border-gray-300 rounded-lg px-5 py-3 focus:outline-none focus:ring-2 focus:ring-indigo-500 placeholder-gray-400 resize-none"
+      ></textarea>
+      <button
+        type="submit"
+        className="bg-indigo-600 text-white font-semibold py-3 rounded-lg hover:bg-indigo-700 transition-all duration-300 text-lg"
       >
-        <h2
-          className="text-4xl font-bold text-center mb-14 text-gray-800"
-          data-aos="fade-up"
+        ✉️ Send Message
+      </button>
+    </form>
+
+    <div
+      className="text-center text-gray-600 text-sm leading-relaxed space-y-2"
+      data-aos="fade-up"
+      data-aos-delay="400"
+    >
+      <p>
+        Or email me directly at{" "}
+        <a
+          href="mailto:prakasitchuchawna@gmail.com"
+          className="text-indigo-600 font-medium underline"
         >
-         Contact Me
-        </h2>
-
-        <div className="max-w-3xl mx-auto bg-white p-10 rounded-3xl shadow-xl space-y-10">
-          <form
-            action="https://formsubmit.co/prakasitchuchawna@gmail.com"
-            method="POST"
-            className="grid grid-cols-1 gap-6"
-            data-aos="fade-up"
-            data-aos-delay="200"
-          >
-            <input
-              type="text"
-              name="name"
-              placeholder="Your Name"
-              required
-              className="border border-gray-300 rounded-lg px-5 py-3 focus:outline-none focus:ring-2 focus:ring-indigo-500 placeholder-gray-400 text-white"
-            />
-            <input
-              type="email"
-              name="email"
-              placeholder="Your Email"
-              required
-              className="border border-gray-300 rounded-lg px-5 py-3 focus:outline-none focus:ring-2 focus:ring-indigo-500 placeholder-gray-400 text-white"
-            />
-            <textarea
-              name="message"
-              rows="5"
-              placeholder="Your Message"
-              required
-              className="border border-gray-300 rounded-lg px-5 py-3 focus:outline-none focus:ring-2 focus:ring-indigo-500 placeholder-gray-400 text-white resize-none"
-            ></textarea>
-            <button
-              type="submit"
-              className="bg-indigo-600 text-white font-semibold py-3 rounded-lg hover:bg-indigo-700 transition-all duration-300 text-lg"
-            >
-              ✉️ Send Message
-            </button>
-          </form>
-
-          <div
-            className="text-center text-gray-600 text-sm leading-relaxed space-y-2"
-            data-aos="fade-up"
-            data-aos-delay="400"
-          >
-            <p>
-              Or email me directly at{" "}
-              <a
-                href="mailto:prakasitchuchawna@gmail.com"
-                className="text-indigo-600 font-medium underline"
-              >
-                prakasitchuchawna@gmail.com
-              </a>
-            </p>
-            <p>
-              📞 Call me at{" "}
-              <a
-                href="tel:+66968573991"
-                className="text-indigo-600 font-medium underline"
-              >
-                +66 96 857 3991
-              </a>
-            </p>
-          </div>
-        </div>
-      </section>
+          prakasitchuchawna@gmail.com
+        </a>
+      </p>
+      <p>
+        📞 Call me at{" "}
+        <a
+          href="tel:+66968573991"
+          className="text-indigo-600 font-medium underline"
+        >
+          +66 96 857 3991
+        </a>
+      </p>
+    </div>
+  </div>
+</section>
       <div className="h-32"></div>a
     </div>
   );
