@@ -476,7 +476,7 @@ function Home() {
             data-aos-delay="400"
           >
             <img
-              src="https://scontent.fcnx4-2.fna.fbcdn.net/v/t39.30808-6/420417288_122094250022198058_8350691303241811681_n.jpg?_nc_cat=100&ccb=1-7&_nc_sid=6ee11a&_nc_ohc=WElsODhWcUkQ7kNvwEUjRgO&_nc_oc=Adl_sKS9RxQPWlczhXE_wWI42UypmXmVTsjEZoVTYbBEl6WKitJYRjO3TMCE15vPRqM&_nc_zt=23&_nc_ht=scontent.fcnx4-2.fna&_nc_gid=L9dANVmUWsBx7uVW1GVl3A&oh=00_AfEHsW4TVkhbft1DTz5MNlnjDvN1mFGtYpLLyDErDzmU8A&oe=680D0A76"
+              src="https://i.imgur.com/ujMZK5E.jpeg"
               alt="Tossagun Digital"
               className="w-28 h-28 object-contain"
             />
